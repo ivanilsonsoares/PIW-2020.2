@@ -1,15 +1,18 @@
+import LogoImg from '../../commom/Imagens/flooop.png'
 export function Navegador() {
-    let Link = (props) =>(
+    let Link = (props) => (
         <a className="link-navegador" href="http://globo.com">{props.linkTexto}</a>
     );
-    return (
-        <div className="div-nav">
-            <nav className="navegador">
-                <Link linkTexto="Logo"></Link>
-                <Link linkTexto="Linha do tempo"></Link>
-                <Link linkTexto="Posts"></Link>
-                <Link linkTexto="Sobre"></Link>
-            </nav>
+    return (<header className="navegador">
+        <div className="logo">
+            <img src={LogoImg} alt="logo"></img>   
         </div>
+
+        <div className="opcoes">
+            <a className="active" href="http://globo.com" >Linha do tempo</a>
+            <Link linkTexto="posts"></Link>
+        </div>
+
+    </header>
     )
 }
