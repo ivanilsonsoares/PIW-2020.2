@@ -1,0 +1,22 @@
+.navegador{
+    background: #000000;
+    width: 700px;
+    height: 40px;
+    display: flex;
+    float: right;
+
+}
+
+.div-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-nav .link-navegador{
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 5px;
+    float: left;
+    color: cornsilk;
+}
