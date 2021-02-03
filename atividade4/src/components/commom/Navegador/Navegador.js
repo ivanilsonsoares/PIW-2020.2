@@ -11,6 +11,7 @@ export function Navegador() {
         <div className="opcoes">
             <a className="active" href="http://globo.com" >Linha do tempo</a>
             <Link linkTexto="posts"></Link>
+            <Link linkTexto="Fulano"></Link>
         </div>
 
     </header>

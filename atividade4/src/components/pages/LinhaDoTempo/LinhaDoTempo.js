@@ -19,11 +19,17 @@ export function LinhaDoTempo() {
                 texto: "testando o sistema",
                 likes: "0101",
                 usuario: "Sousa"
+            },
+            {
+                id: "04",
+                texto: "testando o sistema",
+                likes: "0101",
+                usuario: "Sousa"
             }
         ]
     }
     const listaPosts = infoPosts.listaPosts.map((post) =>
-        <Post id={post.id} nome={post.usuario} texto={post.texto} likes={post.likes}></Post>
+        <Post id={post.id} usuario={post.usuario} texto={post.texto} likes={post.likes}></Post>
     );
 
     return (
