@@ -1,0 +1,59 @@
+.conteudo{
+    margin-top: 5px;
+    background: black;
+    width: 700px;   
+}
+
+.conteudo .conteudo-usuario{
+    color: white;
+    padding: 20px;
+}
+
+.conteudo .conteudo-comments{
+    font-size: 15px;
+    margin-top: -3%;
+    margin-left: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 20px;
+}
+
+.conteudo .conteudo-conteudo{
+    color:black;
+    background:white;
+    padding: 20px;
+    border-radius: 10px 30px;
+    width: 90%;
+    margin-left: 2%;
+}
+
+.conteudo .conteudo-conteudo-comments{
+    color:black;
+    background:white;
+    padding: 15px;
+    border-radius: 10px 30px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.conteudo .conteudo-likes{
+    display: flex;
+    color: white;
+    padding: 10px;
+}
+
+.conteudo .conteudo-likes .likes{
+    margin-left: auto;
+    color: white;
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.conteudo .conteudo-likes .comments{
+    margin-left: auto;
+    color: white;
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
