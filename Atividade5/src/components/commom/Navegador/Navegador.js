@@ -1,17 +1,16 @@
 import LogoImg from '../../commom/Imagens/flooop.png'
+import { Link, NavLink } from 'react-router-dom'
+import './Navegador.css';
 export function Navegador() {
-    let Link = (props) => (
-        <a className="link-navegador" href="http://globo.com">{props.linkTexto}</a>
-    );
     return (<header className="navegador">
         <div className="logo">
             <img src={LogoImg} alt="logo"></img>   
         </div>
 
         <div className="opcoes">
-            <a className="active" href="http://globo.com" >Linha do tempo</a>
-            <Link linkTexto="posts"></Link>
-            <Link linkTexto="Fulano"></Link>
+            <NavLink exact className="link-navegador" to="/" >Linha do tempo</NavLink>
+            <NavLink className="link-navegador" to="/comentario">posts</NavLink>
+            <Link className="usuario">Fulano</Link>
         </div>
 
     </header>

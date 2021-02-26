@@ -30,16 +30,18 @@
     background-color: white;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    padding: 9px; 
+}
+
+.navegador .opcoes .usuario {
+    color: rgb(138 43 226);
+    text-decoration: none;
     padding: 9px;
     
 }
 
-.link-navegador{
-    color: white;
+.navegador .opcoes .link-navegador{
+    color: rgb(138 43 226);
     text-decoration: none;
     padding: 9px;
-}
-.link-navegador:hover{
-    background-color: white;
-    color: black;
 }

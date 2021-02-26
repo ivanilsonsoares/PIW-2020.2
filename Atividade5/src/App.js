@@ -2,10 +2,11 @@ import './App.css';
 import { PaginaPrincipal } from './components/pages/PaginaPrincipal/PaginaPrincipal';
 import { PaginaComentario } from './components/pages/PaginaComentario/paginaComentario';
 import './components/commom/Navegador/Navegador.css'
-import { BrowserRouter, Route } from 'react-router-dom';
+import {Router , Route } from 'react-router-dom';
+import history from './history';
 function App() {
-  return (
-    <BrowserRouter>
+  return ( 
+    <Router history={history}>
       <Route exact path="/">
         <PaginaPrincipal></PaginaPrincipal>
       </Route>
@@ -13,7 +14,7 @@ function App() {
         <PaginaComentario></PaginaComentario>
       </Route>
       
-    </BrowserRouter>
+    </Router>
     
   )
 }

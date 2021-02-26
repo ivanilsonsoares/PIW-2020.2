@@ -9,6 +9,7 @@
     padding: 20px;
 }
 
+
 .conteudo .conteudo-conteudo{
     color:black;
     background:white;
@@ -24,12 +25,15 @@
     padding: 10px;
 }
 
-.conteudo .conteudo-likes .comments a{
+
+.conteudo .conteudo-likes .comments{
     margin-left: auto;
-    color: white;
-    padding: 10px;
-    background-color: blueviolet;
-    border-radius: 10px;
-    text-decoration: none;
 }
 
+
+.conteudo .conteudo-likes .comments .button{
+    background-color: blueviolet;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
