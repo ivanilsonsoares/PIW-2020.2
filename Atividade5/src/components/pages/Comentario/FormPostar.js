@@ -5,7 +5,6 @@ export function Comentario() {
     function click() {
         history.push("/");
     }
-
     return (
 
         <div className="conteudo">
