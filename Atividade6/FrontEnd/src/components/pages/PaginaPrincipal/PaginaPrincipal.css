@@ -1,0 +1,33 @@
+.conteudo{
+    margin-top: 5px;
+    background: black;
+    width: 700px;
+    
+}
+
+.conteudo .conteudo-usuario{
+    color: white;
+    padding: 20px;
+}
+
+.conteudo .conteudo-conteudo{
+    color:black;
+    background:white;
+    padding: 20px;
+    border-radius: 10px 30px;
+    width: 90%;
+    margin-left: 2%;
+}
+
+.conteudo .conteudo-likes{
+    color: white;
+    padding: 10px;
+}
+
+.conteudo .conteudo-likes button{
+    color: white;
+    padding: 10px;
+    margin-left: 500px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}

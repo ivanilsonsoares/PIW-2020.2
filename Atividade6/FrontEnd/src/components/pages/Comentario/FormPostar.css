@@ -1,0 +1,39 @@
+.conteudo{
+    margin-top: 5px;
+    background: black;
+    width: 700px;   
+}
+
+.conteudo .conteudo-usuario{
+    color: white;
+    padding: 20px;
+}
+
+
+.conteudo .conteudo-conteudo{
+    color:black;
+    background:white;
+    padding: 20px;
+    border-radius: 10px 30px;
+    width: 90%;
+    margin-left: 2%;
+}
+
+.conteudo .conteudo-likes{
+    display: flex;
+    color: white;
+    padding: 10px;
+}
+
+
+.conteudo .conteudo-likes .comments{
+    margin-left: auto;
+}
+
+
+.conteudo .conteudo-likes .comments .button{
+    background-color: blueviolet;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}

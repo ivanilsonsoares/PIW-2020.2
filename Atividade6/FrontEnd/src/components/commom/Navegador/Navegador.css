@@ -1,0 +1,47 @@
+.navegador{
+    background: #000000;
+    width: 700px;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    list-style:none;
+}
+
+.navegador .logo{
+    color: white;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.navegador .logo img{
+    width: 80px;
+    height: 100px;
+}
+
+.navegador .opcoes{
+    margin-left: auto;
+    color: white;
+    text-decoration: none;
+    padding: 9px;
+}
+
+.navegador .opcoes .active {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 9px; 
+}
+
+.navegador .opcoes .usuario {
+    color: rgb(138 43 226);
+    text-decoration: none;
+    padding: 9px;
+    
+}
+
+.navegador .opcoes .link-navegador{
+    color: rgb(138 43 226);
+    text-decoration: none;
+    padding: 9px;
+}
