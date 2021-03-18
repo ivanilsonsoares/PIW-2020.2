@@ -2,6 +2,7 @@
     margin-top: 5px;
     background: black;
     width: 700px;   
+    color: white;
 }
 
 .conteudo .conteudo-usuario{
@@ -17,6 +18,8 @@
     border-radius: 10px 30px;
     width: 90%;
     margin-left: 2%;
+    outline: none;
+    border: none;
 }
 
 .conteudo .conteudo-likes{

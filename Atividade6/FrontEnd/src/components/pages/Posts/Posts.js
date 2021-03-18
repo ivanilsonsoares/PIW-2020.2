@@ -40,7 +40,6 @@ export function Post(props) {
                 <input type="submit" className="button" onClick={click} value="Comentar"></input>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,7 +1,8 @@
 .conteudo{
     margin-top: 5px;
+    margin-bottom: 5px;
     background: black;
-    width: 700px;   
+    width: 700px;  
 }
 
 .conteudo .conteudo-usuario{
@@ -62,5 +63,15 @@
     width: 75%;
     margin-left: 16%;
     margin-top: 2%;
-    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.conteudo .conteudo-likes .comments .button{
+    outline: none;
+    border: none;
+}
+
+.conteudo .conteudo-likes .comments .button:hover{
+    background: rgb(79, 23, 131);
 }
