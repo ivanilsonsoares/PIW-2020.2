@@ -1,14 +1,40 @@
 import './Posts.css'
 import history from '../../../history'
 import { useState } from 'react'
-export function Post(props) {
-    const [count, setCount] = useState(0);
+
+function ComentarioPost() {
     function click() {
         history.push("/comentario");
     }
+    return (
+        <div>
+            <div className="conteudo-comments">
+                Comentarios:
+            </div>
+            <div className="conteudo-conteudo-comments">
+                <h1>Marcos: Olá tudo bem?</h1>
+            </div>
 
-    const clickButton= ()=>{
-        setCount(count+1)
+            <div className="conteudo-conteudo-comments">
+                <h1>Paula: Como vc esta?</h1>
+
+            </div>
+            <input className="conteudo-edit" type="text" placeholder="digite seu comentario aqui"></input>
+            <div className="conteudo-likes">
+                <div className="comments" >
+                    <input type="submit" className="button" onClick={click} value="Comentar"></input>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export function Post(props) {
+    const [count, setCount] = useState(0);
+
+
+    const clickButton = () => {
+        setCount(count + 1)
     }
 
     return (
@@ -23,23 +49,7 @@ export function Post(props) {
                 Likes: {count}
                 <button className="likes" onClick={clickButton}>Curtir</button>
             </div>
-            <div className="conteudo-comments">
-                Comentarios:
-            </div>
-            <div className="conteudo-conteudo-comments">
-            <h1>Marcos: Olá tudo bem?</h1>
-            </div>
-            
-            <div className="conteudo-conteudo-comments">
-            <h1>Paula: Como vc esta?</h1>
-   
-            </div>
-            <input className="conteudo-edit" type="text" placeholder="digite seu comentario aqui"></input>
-            <div className="conteudo-likes">
-                <div className="comments" >
-                <input type="submit" className="button" onClick={click} value="Comentar"></input>
-                </div>
-            </div>
+            <ComentarioPost></ComentarioPost>
         </div>
     )
 }

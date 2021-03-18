@@ -1,19 +1,17 @@
-import axios from "axios"
 import { Navegador } from "../../commom/Navegador/Navegador";
 import { useForm } from "react-hook-form"
 import './Cadastro.css';
+import history from "../../../history"
+import { CadastroUser } from "../../../api/Auth";
 
 function FormularioCadastro() {
 
     const { register, handleSubmit } = useForm();
 
     const Submit = (usuario) => {
-        axios({
-            method: "POST",
-            url: "http://localhost:8000/api/usuarios",
-            data: usuario,
-        }).then((response) => {
+        CadastroUser(usuario).then((response) => {
             console.log(response);
+            history.push("/login");
         }).catch((error) => {
             console.log(error);
         })

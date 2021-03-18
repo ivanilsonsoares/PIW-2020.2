@@ -7,7 +7,7 @@ module.exports = function () {
         },
         likes: {
             type: Number,
-            required: true
+            required: false
         },
         usuario: {
             type: mongoose.Schema.ObjectId,
