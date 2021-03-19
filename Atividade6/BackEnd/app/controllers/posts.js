@@ -51,7 +51,7 @@ module.exports.inserirPost = function (req, res) {
     promisse.then(function (post) {
         res.status(201).json(Views.render(post));
     }).catch(function (error) {
-        res.status(400).json({ mensagem: "Sua mensagem não foi..." })
+        console.log(postFim)
     })
 
 }

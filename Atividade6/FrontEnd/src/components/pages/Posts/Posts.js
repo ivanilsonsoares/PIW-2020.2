@@ -1,30 +1,73 @@
 import './Posts.css'
-import history from '../../../history'
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../../../App';
+import { useForm } from "react-hook-form"
+import { CriarComentario, ListarComentario } from '../../../api/CometarioApi';
+
+function ListarCometarios({ comentarios }) {
+    console.log("comentarios");
+    console.log(comentarios);
+    return (
+        <div>
+            <ul>
+                {comentarios.map((comentario) => (
+                    <li className="conteudo-conteudo-comments">
+                      {comentario.usuario.nome} : {comentario.post._id} :  {comentario.texto}
+                    </li>))}
+            </ul>
+        </div>
+    );
+
+}
+
+function AdcionarComentario({onComentar}){
+    const { register, handleSubmit } = useForm([]);
+    const Submit = (comentario) => {onComentar(comentario)};
+    return(
+        <form onSubmit={handleSubmit(Submit)}>
+            <input name="texto" className="conteudo-edit" type="text" placeholder="digite seu comentario aqui" ref={register}/>
+            <div className="conteudo-likes">
+                <div className="comments" >
+                    <button className="button"> Comentar </button>
+                </div>
+            </div>
+        </form>
+    )
+}
 
 function ComentarioPost() {
-    function click() {
-        history.push("/comentario");
+
+    const { token }  = useContext(AuthContext)
+
+    const [comentarios, setComentarios] = useState([]);
+
+    useEffect(()=>{
+        ListarComentario(token.token).then(
+            (response) =>{
+                setComentarios(response.data);
+            }
+        ).catch(
+            (error =>{
+                console.log(error);
+            })
+        )
+    },[]);
+
+    const adicionarCometario = (comentario) =>{
+       CriarComentario(token.token, comentario).then(
+           (response) =>{
+               console.log(response);
+           }
+       ).catch(
+           (error)=>{
+               console.log(error);
+           }
+       )
     }
     return (
         <div>
-            <div className="conteudo-comments">
-                Comentarios:
-            </div>
-            <div className="conteudo-conteudo-comments">
-                <h1>Marcos: Olá tudo bem?</h1>
-            </div>
-
-            <div className="conteudo-conteudo-comments">
-                <h1>Paula: Como vc esta?</h1>
-
-            </div>
-            <input className="conteudo-edit" type="text" placeholder="digite seu comentario aqui"></input>
-            <div className="conteudo-likes">
-                <div className="comments" >
-                    <input type="submit" className="button" onClick={click} value="Comentar"></input>
-                </div>
-            </div>
+            <ListarCometarios comentarios={comentarios}></ListarCometarios>
+            <AdcionarComentario onComentar={adicionarCometario}></AdcionarComentario>
         </div>
     );
 }
