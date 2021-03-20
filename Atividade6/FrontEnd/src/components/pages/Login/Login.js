@@ -14,7 +14,7 @@ export function FormularioLogin(){
             auth.setAuth({token: response.data.token, nome: response.data.nome});
             history.push("/");
         }).catch((error)=>{
-            console.log(error);
+            alert(error);
         })
     }
     return(

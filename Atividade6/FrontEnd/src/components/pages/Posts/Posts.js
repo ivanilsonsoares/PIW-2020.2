@@ -3,8 +3,26 @@ import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../../App';
 import { useForm } from "react-hook-form"
 import { CriarComentario, ListarComentario } from '../../../api/CometarioApi';
+import { ListarPost } from '../../../api/PostApi';
+
 
 function ListarCometarios({ comentarios }) {
+    const { token }  = useContext(AuthContext)
+    const [posts, setPosts] = useState([]);
+   
+    useEffect(()=>{
+        ListarPost(token.token).then(
+            (response) =>{
+                setPosts(response.data);
+            }
+        ).catch(
+            (error =>{
+                console.log(error);
+            })
+        )
+    },[]);
+    console.log("Post");
+    console.log(posts);
     console.log("comentarios");
     console.log(comentarios);
     return (
@@ -12,7 +30,11 @@ function ListarCometarios({ comentarios }) {
             <ul>
                 {comentarios.map((comentario) => (
                     <li className="conteudo-conteudo-comments">
-                      {comentario.usuario.nome} : {comentario.post._id} :  {comentario.texto}
+                        {
+                            comentario.post._id == posts ?
+                            comentario.usuario.nome +":"+ comentario.post._id +":"+  comentario.texto :
+                            comentario.usuario.nome +":"+ comentario.post._id +":"+  comentario.texto
+                        }
                     </li>))}
             </ul>
         </div>

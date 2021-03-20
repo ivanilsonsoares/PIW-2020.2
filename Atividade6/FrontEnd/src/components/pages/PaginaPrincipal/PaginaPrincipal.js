@@ -4,9 +4,9 @@ import { AuthContext } from "../../../App";
 import { Navegador } from "../../commom/Navegador/Navegador";
 import { LinhaDoTempo } from "../LinhaDoTempo/LinhaDoTempo";
 export function PaginaPrincipal() {
-    const { token }  = useContext(AuthContext)
+    const { token }  = useContext(AuthContext);
     const [posts, setPosts] = useState([]);
-    
+   
     useEffect(()=>{
         ListarPost(token.token).then(
             (response) =>{
