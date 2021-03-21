@@ -32,7 +32,7 @@ function ListarCometarios({ comentarios }) {
                     <li className="conteudo-conteudo-comments">
                         {
                             comentario.post._id == posts ?
-                            comentario.usuario.nome +":"+ comentario.post._id +":"+  comentario.texto :
+                            comentario.usuario.nome +"|:|"+ comentario.post._id +":"+  comentario.texto :
                             comentario.usuario.nome +":"+ comentario.post._id +":"+  comentario.texto
                         }
                     </li>))}
