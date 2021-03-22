@@ -15,7 +15,7 @@ export function FormularioLogin(){
             auth.setAuth({token: response.data.token, nome: response.data.nome});
             history.push("/");
         }).catch((error)=>{
-            alert(error);
+            alert("Usario ou senha incorreta");
         })
     }
     return(

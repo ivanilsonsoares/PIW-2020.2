@@ -3,8 +3,6 @@ import { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../../App';
 import { useForm } from "react-hook-form"
 import { CriarComentario, ListarComentario } from '../../../api/CometarioApi';
-import history from '../../../history';
-
 
 function ListarCometarios({ comentarios }) {
     return (
