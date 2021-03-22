@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export function ListarComentario(token){
+export function ListarComentario(idPost,token){
     return axios({
         method:"GET",
-        url:"http://localhost:8000/api/comentario",
+        url:"http://localhost:8000/api/posts/"+idPost+"/comentarios",
         headers:{
             "token": token,
         }

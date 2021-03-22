@@ -75,3 +75,14 @@
 .conteudo .conteudo-likes .comments .button:hover{
     background: rgb(79, 23, 131);
 }
+
+select{
+    width: 0;
+    height: 0;
+}
+
+li.conteudo-conteudo-comments {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 50px;
+}

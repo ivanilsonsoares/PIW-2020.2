@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import { useContext} from 'react';
 import { CriarPost } from '../../../api/PostApi';
 import { AuthContext } from "../../../App";
+import history from '../../../history';
 
 function Comentar({onSubmeter}) {
     const { register, handleSubmit } = useForm([]);
@@ -13,7 +14,7 @@ function Comentar({onSubmeter}) {
             <input name="texto" className="conteudo-conteudo" type="text" placeholder="digite seu comentario aqui" ref={register} />
             <div className="conteudo-likes">
                 <div className="comments">
-                    <button className="button">Postar</button>
+                    <button className="button" >Postar</button>
                 </div>
 
             </div>
@@ -27,7 +28,8 @@ export function Comentario() {
     const adicionarComentario = (post) => {
         CriarPost(token.token, post).then(
             (response) =>{
-                console.log(response);  
+                console.log(response);
+                history.push("/");
             }
         ).catch(
             (error)=>{

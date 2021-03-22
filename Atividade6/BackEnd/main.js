@@ -6,4 +6,4 @@ http.createServer(app).listen(app.get('port'), function(){
     console.log('Servidor rodando '+app.get('port'));
 });
 
-db('mongodb://localhost/sistemamatricula1');
+db('mongodb://localhost/sistema1');

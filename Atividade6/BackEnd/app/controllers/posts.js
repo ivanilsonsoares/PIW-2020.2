@@ -5,10 +5,8 @@ const jwt = require("jsonwebtoken");
 const { findOne } = require('../models/post');
 
 module.exports.listarPost = function (req, res) {
-    let token = req.headers.token;
-    let payload = jwt.decode(token);
-    let usuario_logado = payload.id;
-    let promise = Post.find({ usuario: usuario_logado }).exec();
+    
+    let promise = Post.find().populate("usuario").exec();
     promise.then(function (post) {
         res.status(200).json(Views.renderMany(post));
     }).catch(function (error) {
@@ -76,7 +74,7 @@ module.exports.removerPost = function (req, res) {
 
 module.exports.obterComentarios = function (req, res) {
     let id = req.params.id;
-    let promise = ComentariosModels.find({ post: id }).populate("comentarios").exec();
+    let promise = ComentariosModels.find({ post: id }).populate("comentarios").populate("usuario").exec();
     promise.then(function (posts) {
         res.status(200).json(Views.renderMany(posts));
     }).catch(function (error) {

@@ -3,7 +3,7 @@ function render(post){
         id: post._id,
         texto: post.texto,
         likes: post.likes,
-        usaurio: post.usuario
+        usuario: post.usuario
     }
 }
 module.exports.render = render;
